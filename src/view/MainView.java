@@ -42,9 +42,9 @@ public class MainView extends PApplet {
 
 	public void setup() {
 		cp5 = new ControlP5(this);
-		carcharview = new CarCharView(); 
-		carcompareview = new CarCompareView();
-		compraview = new CompraView(); 
+		carcharview = new CarCharView(this); 
+		carcompareview = new CarCompareView(this);
+		compraview = new CompraView(this); 
 		envioview = new EnvioView(); 
 		historialview = new HistorialView(); 
 		homeview = new HomeView(); 
