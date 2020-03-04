@@ -1,24 +1,38 @@
 package model;
 
-import model.Auto;
-import model.Pedido;
-import model.Tarjeta;
-import model.Usuario;
+import java.util.ArrayList;
+
 
 public class Tesla {
+	private ArrayList<Usuario> usuarios;
 
-	private Auto auto;
-	private Pedido pedido;
-	private Tarjeta tarjeta;
-	private Usuario usuario;
+	
 
 	public Tesla() {
-	 auto = new Model3(); 
-	 pedido = new Pedido(); 
-	 tarjeta = new Tarjeta(); 
-	 usuario = new Usuario(); 
+		usuarios = new ArrayList<Usuario>();
+	
 	 
 
+	}
+	public void registerUser(String username, String password, String email) {
+		usuarios.add(new Usuario(username, password, email));
+		
+		for (Usuario nuevo : usuarios) {
+			System.out.println(usuarios.size());
+			System.out.println(nuevo.getUsername());
+			System.out.println(nuevo.getPassword());
+			System.out.println(nuevo.getEmail());
+			System.out.println("====================");
+		}
+		
+		/*
+		 * Es lo mismo que arriba pero con indice
+		 * for (int i = 0; i < listUsers.size(); i++) {
+			System.out.println(listUsers.get(i).getUsername());
+			System.out.println(listUsers.get(i).getPassword());
+			System.out.println(listUsers.get(i).getEmail());
+			System.out.println("====================");
+		}*/
 	}
 
 }

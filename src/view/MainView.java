@@ -51,8 +51,8 @@ public class MainView extends PApplet {
 		historialview = new HistorialView(); 
 		homeview = new HomeView(); 
 		resumeview = new ResumenView(); 
-		sc1loginview = new Sc1LoginView(this); 
-		sc1signinview = new Sc1SigninView(); 
+		sc1loginview = new Sc1LoginView(); 
+		sc1signinview = new Sc1SigninView(this); 
 		
 		
 		
@@ -60,10 +60,19 @@ public class MainView extends PApplet {
 	}
 
 	public void draw() {
-		sc1loginview.drawScreen1();
-		//sc1loginview.nada();
+		background(0); 
+		sc1signinview.drawScreen();
+		text("mousex:"+mouseX+"mouseY:"+mouseY,mouseX,mouseY);
+		
+		
+		
 
 	}
+	public void mousePressed() {
+		sc1signinview.getInfoForm();
+	}
+	
+	
 	
 	
 	
