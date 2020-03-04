@@ -2,6 +2,8 @@ package view;
 
 
 import processing.core.PApplet;
+import processing.core.PFont;
+import processing.core.PFont;
 import controlP5.*; 
 
 
@@ -49,8 +51,9 @@ public class MainView extends PApplet {
 		historialview = new HistorialView(); 
 		homeview = new HomeView(); 
 		resumeview = new ResumenView(); 
-		sc1loginview = new Sc1LoginView(); 
+		sc1loginview = new Sc1LoginView(this); 
 		sc1signinview = new Sc1SigninView(); 
+		
 		
 		
 
