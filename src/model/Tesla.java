@@ -1,18 +1,23 @@
 package model;
 
-import processing.core.PApplet;
-import processing.core.PFont;
-import controlP5.*;
+import model.Auto;
+import model.Pedido;
+import model.Tarjeta;
+import model.Usuario;
 
+public class Tesla {
 
-public class Tesla extends PApplet {
+	private Auto auto;
+	private Pedido pedido;
+	private Tarjeta tarjeta;
+	private Usuario usuario;
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		PApplet.main("model.Tesla"); 
-		
-		
-		
+	public Tesla() {
+	 auto = new Model3(); 
+	 pedido = new Pedido(); 
+	 tarjeta = new Tarjeta(); 
+	 usuario = new Usuario(); 
+	 
 
 	}
 
