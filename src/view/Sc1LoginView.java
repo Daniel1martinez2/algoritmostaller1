@@ -44,6 +44,9 @@ public class Sc1LoginView {
 		            );
 		  }
 		}
+	public void nada() {
+		System.out.println(cp5.get(Textfield.class, "input").getText());
+	}
 	public void input(String theText) {
 		  // automatically receives results from controller input
 		  System.out.println("a textfield event for controller 'input' : "+theText);

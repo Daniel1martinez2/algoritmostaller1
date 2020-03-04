@@ -61,13 +61,12 @@ public class MainView extends PApplet {
 
 	public void draw() {
 		sc1loginview.drawScreen1();
+		//sc1loginview.nada();
 
 	}
 	
-	public void input(String theText) {
-		  // automatically receives results from controller input
-		  System.out.println("a textfield event for controller 'input' : "+theText);
-		}
+	
+	
 
 }
  
