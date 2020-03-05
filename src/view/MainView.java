@@ -38,7 +38,7 @@ public class MainView extends PApplet {
 	}
 	
 	public void settings() {
-		size(300, 600);
+		size(375,812);
 
 	}
 
@@ -51,7 +51,7 @@ public class MainView extends PApplet {
 		historialview = new HistorialView(); 
 		homeview = new HomeView(); 
 		resumeview = new ResumenView(); 
-		sc1loginview = new Sc1LoginView(); 
+		sc1loginview = new Sc1LoginView(this); 
 		sc1signinview = new Sc1SigninView(this); 
 		
 		
@@ -61,7 +61,7 @@ public class MainView extends PApplet {
 
 	public void draw() {
 		background(0); 
-		sc1signinview.drawScreen();
+		sc1loginview.drawScreen();
 		text("mousex:"+mouseX+"mouseY:"+mouseY,mouseX,mouseY);
 		
 		
@@ -69,7 +69,7 @@ public class MainView extends PApplet {
 
 	}
 	public void mousePressed() {
-		sc1signinview.getInfoForm();
+		sc1loginview.getInfoForm();
 	}
 	
 	
