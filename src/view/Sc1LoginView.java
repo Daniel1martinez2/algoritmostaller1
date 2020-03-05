@@ -15,6 +15,9 @@ public class Sc1LoginView {
 	private ControlP5 cp5;
 	private String[] inputs;
 	private Sc1LoginControl sc1logincontrol;
+	private PImage img1; 
+	private PFont font1; 
+	
 	
 
 	
@@ -28,16 +31,26 @@ public class Sc1LoginView {
 		
 		this.app = app; 
 		cp5 = new ControlP5(app);
-		//img1 = app.loadImage("img/img1.png"); 
+		img1 = app.loadImage("img/login.png"); 
 		inputs = new String[4];
+		font1  = app.createFont("fonts/font1.ttf",18); 
+		
 		inputs[0] = "username";
 		inputs[1] = "password";
 		inputs[2] = "confirmPassword";
 		inputs[3] = "email";
 
 		for (int i = 0; i < inputs.length; i++) {
-			cp5.addTextfield(inputs[i]).setPosition((app.width / 2) - 100, 30 + (i * 70)).setSize(200, 40)
-					.setAutoClear(true);
+			cp5.addTextfield(inputs[i]).setPosition((app.width / 2) - 120, 325 + (i * 65))
+			.setSize(210, 30)
+		    .setAutoClear(true) 
+		    .setColor(0)
+		    .setColorActive(app.color(255,0,0,1)) // color del cuadrado externo
+			.setColorBackground(app.color(255,255,255,1)) // asi lo vuelvo transparente
+			.setColorForeground(app.color(255,0,0,1)) 
+			.setFont(font1)
+			.setColorCaptionLabel(app.color(255));
+			
 		}
 		
 		sc1logincontrol = new Sc1LoginControl();
@@ -48,17 +61,19 @@ public class Sc1LoginView {
 	}
 	
 	public void drawScreen() {
-		//app.image(img1, 0, 0);
-
+		app.image(img1, 0, 0);
 		drawButton();
 	
 	}
 	private void drawButton() {
-		app.fill(255,0,0);
-		app.rect((app.width / 2) - 40, (app.height) - 50, 80, 30);
+		app.fill(255,0,0,1);
+		app.noStroke();
+		app.rect((app.width / 2) - 40, 700, 80, 30);
 	}
 	public void getInfoForm() {
-		if (app.mouseX > 112 && app.mouseX < 192 && app.mouseY > 555 && app.mouseY < 582) {
+		if (app.mouseX > (app.width / 2) - 40 
+				&& app.mouseX < (app.width / 2) - 4+80 
+				&& app.mouseY > 700 && app.mouseY < 700+30) {
 			username = cp5.get(Textfield.class, "username").getText();
 			password = cp5.get(Textfield.class, "password").getText();
 			confirmPassword = cp5.get(Textfield.class, "confirmPassword").getText();

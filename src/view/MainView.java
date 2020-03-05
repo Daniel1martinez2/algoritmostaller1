@@ -62,7 +62,8 @@ public class MainView extends PApplet {
 	public void draw() {
 		background(0); 
 		sc1loginview.drawScreen();
-		text("mousex:"+mouseX+"mouseY:"+mouseY,mouseX,mouseY);
+	    //fill(255,0,0); 
+		//text("mousex:"+mouseX+"mouseY:"+mouseY,mouseX,mouseY);
 		
 		
 		
