@@ -36,9 +36,9 @@ public class Sc1LoginView {
 		font1  = app.createFont("fonts/font1.ttf",18); 
 		
 		inputs[0] = "username";
-		inputs[1] = "password";
-		inputs[2] = "confirmPassword";
-		inputs[3] = "email";
+		inputs[2] = "password";
+		inputs[3] = "confirmPassword";
+		inputs[1] = "email";
 
 		for (int i = 0; i < inputs.length; i++) {
 			cp5.addTextfield(inputs[i]).setPosition((app.width / 2) - 120, 328 + (i * 62))
