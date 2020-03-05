@@ -41,13 +41,13 @@ public class Sc1LoginView {
 		inputs[3] = "email";
 
 		for (int i = 0; i < inputs.length; i++) {
-			cp5.addTextfield(inputs[i]).setPosition((app.width / 2) - 120, 325 + (i * 65))
+			cp5.addTextfield(inputs[i]).setPosition((app.width / 2) - 120, 328 + (i * 62))
 			.setSize(210, 30)
 		    .setAutoClear(true) 
 		    .setColor(0)
 		    .setColorActive(app.color(255,0,0,1)) // color del cuadrado externo
 			.setColorBackground(app.color(255,255,255,1)) // asi lo vuelvo transparente
-			.setColorForeground(app.color(255,0,0,1)) 
+			.setColorForeground(app.color(255,0,0,1))  //// 
 			.setFont(font1)
 			.setColorCaptionLabel(app.color(255));
 			
