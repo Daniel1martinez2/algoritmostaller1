@@ -79,9 +79,15 @@ public class Sc1LoginView {
 			email = cp5.get(Textfield.class, "email").getText();
 			
 			//Esto valida que un string sea igual a otro
-			if(password.equals(confirmPassword)) {
-				sc1logincontrol.getInfoForm(username,password,confirmPassword,email);
+			String Str1 = new String("");
+			 boolean confirmo; 
+			 confirmo = Str1.equals(username); 
+			if(!confirmo) {
+				if(password.equals(confirmPassword) ) {
+					sc1logincontrol.getInfoForm(username,password,confirmPassword,email);
+				}
 			}
+			
 		}
 	}
 
