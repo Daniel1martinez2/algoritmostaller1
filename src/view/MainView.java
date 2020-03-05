@@ -49,7 +49,7 @@ public class MainView extends PApplet {
 		compraview = new CompraView(); 
 		envioview = new EnvioView(); 
 		historialview = new HistorialView(); 
-		homeview = new HomeView(); 
+		homeview = new HomeView(this); 
 		resumeview = new ResumenView(); 
 		sc1loginview = new Sc1LoginView(this); 
 		sc1signinview = new Sc1SigninView(this); 
@@ -62,6 +62,7 @@ public class MainView extends PApplet {
 	public void draw() {
 		background(0); 
 		sc1loginview.drawScreen();
+	//homeview.drawpantalla();
 	    //fill(255,0,0); 
 		//text("mousex:"+mouseX+"mouseY:"+mouseY,mouseX,mouseY);
 		

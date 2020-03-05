@@ -1,7 +1,6 @@
 package view;
 
 import controller.Sc1LoginControl;
-import controller.Sc1SigninControl;
 import processing.core.PApplet;
 import processing.core.PImage;
 import controlP5.*;
@@ -49,7 +48,7 @@ public class Sc1LoginView {
 			.setColorBackground(app.color(255,255,255,1)) // asi lo vuelvo transparente
 			.setColorForeground(app.color(255,0,0,1))  //// 
 			.setFont(font1)
-			.setColorCaptionLabel(app.color(255));
+			.setColorCaptionLabel(app.color(255,0,0,1));
 			
 		}
 		
