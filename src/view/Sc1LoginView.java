@@ -43,7 +43,7 @@ public class Sc1LoginView {
 			cp5.addTextfield(inputs[i]).setPosition((app.width / 2) - 120, 328 + (i * 62))
 			.setSize(210, 30)
 		    .setAutoClear(true) 
-		    .setColor(0)
+		    .setColor(100)
 		    .setColorActive(app.color(255,0,0,1)) // color del cuadrado externo
 			.setColorBackground(app.color(255,255,255,1)) // asi lo vuelvo transparente
 			.setColorForeground(app.color(255,0,0,1))  //// 
@@ -58,6 +58,7 @@ public class Sc1LoginView {
 		
 		
 	}
+	
 	
 	public void drawScreen() {
 		app.image(img1, 0, 0);
@@ -80,16 +81,30 @@ public class Sc1LoginView {
 			
 			//Esto valida que un string sea igual a otro
 			String Str1 = new String("");
-			 boolean confirmo; 
-			 confirmo = Str1.equals(username); 
-			if(!confirmo) {
+			 boolean confirmo1; 
+			 boolean confirmo2;
+			 boolean confirmo3; 
+			
+			 
+			 
+			 confirmo3 = Str1.equals(password); 
+			 confirmo2 = Str1.equals(email); 
+			 confirmo1 = Str1.equals(username); 
+			if(!confirmo1 && !confirmo2  && !confirmo3 ) {
 				if(password.equals(confirmPassword) ) {
 					sc1logincontrol.getInfoForm(username,password,confirmPassword,email);
+					
 				}
 			}
 			
 		}
 	}
+	
+	public void cambio() {
+		
+	}
+	
+	
 
 	
 

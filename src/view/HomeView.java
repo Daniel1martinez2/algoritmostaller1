@@ -20,6 +20,7 @@ public class HomeView {
 				
 	}
 	
+	
 	public void drawpantalla() {
 		app.image(homeimg,0,0); 
 		
