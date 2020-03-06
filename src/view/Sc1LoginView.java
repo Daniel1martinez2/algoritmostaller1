@@ -16,8 +16,7 @@ public class Sc1LoginView {
 	private Sc1LoginControl sc1logincontrol;
 	private PImage img1; 
 	private PFont font1; 
-	
-	private boolean cambio=true; 
+	private boolean cambio; 
 	
 	
 
@@ -27,6 +26,7 @@ public class Sc1LoginView {
 	
 
 	public Sc1LoginView(PApplet app) {
+		 cambio=true;
 	
 		sc1login = new Sc1LoginControl();
 		
@@ -42,6 +42,7 @@ public class Sc1LoginView {
 		inputs[3] = "confirmPassword";
 		inputs[1] = "email";
 
+		
 		for (int i = 0; i < inputs.length; i++) {
 			cp5.addTextfield(inputs[i]).setPosition((app.width / 2) - 120, 328 + (i * 62))
 			.setSize(210, 30)
@@ -51,16 +52,22 @@ public class Sc1LoginView {
 			.setColorBackground(app.color(255,255,255,1)) // asi lo vuelvo transparente
 			.setColorForeground(app.color(255,0,0,1))  //// 
 			.setFont(font1)
+			//.setVisible(cambio) 
 			.setColorCaptionLabel(app.color(255,0,0,1));
+			
 			
 		}
 		
 		sc1logincontrol = new Sc1LoginControl();
+		cp5.addTextfield("hola").setPosition((app.width / 2) - 120, 600 ); 
+		 
 		
+			
 		
 		
 		
 	}
+	
 	
 	
 	public void drawScreen() {
@@ -69,7 +76,7 @@ public class Sc1LoginView {
 	
 	}
 	private void drawButton() {
-		app.fill(255,0,0,1);
+		app.fill(255,0,0);
 		app.noStroke();
 		app.rect((app.width / 2) - 40, 700, 80, 30);
 	}
@@ -99,6 +106,7 @@ public class Sc1LoginView {
 				if(password.equals(confirmPassword) ) {
 					sc1logincontrol.getInfoForm(username,password,confirmPassword,email);
 					cambio=false;
+					cp5.get(Textfield.class, "hola").hide(); 
 					
 				}
 			}

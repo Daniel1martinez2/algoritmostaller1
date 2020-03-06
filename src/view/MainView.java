@@ -60,6 +60,10 @@ public class MainView extends PApplet {
 		screen = 0;
 		
 		
+		
+
+		
+		
 
 	}
 
@@ -86,11 +90,27 @@ public class MainView extends PApplet {
 
 	}
 	public void mousePressed() {
-		sc1loginview.getInfoForm();
-		if(sc1loginview.getCambio()==false) {
-			screen=1;
-		}
+		   switch (screen) {
+			case 0:
+				sc1loginview.getInfoForm();
+				if(sc1loginview.getCambio()==false) {
+					
+					screen=1;
+				}
+				
+				break;
+			case 1: 
+				
+				break; 
+
+			default:
+				break;
+			}
+		
 	}
+
+
+
 	
 	
 	
