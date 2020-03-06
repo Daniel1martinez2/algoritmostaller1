@@ -13,7 +13,9 @@ public class HomeControl {
 	
 	public void nombres() {
 		for (int i = 0; i < tesla.getUsuarios().size(); i++) {
-			tesla.getUsuarios().get(i).getUsername(); 
+			tesla.getUsuarios().get(i).getUsername();
+			
+			
 		}
 		
 		
