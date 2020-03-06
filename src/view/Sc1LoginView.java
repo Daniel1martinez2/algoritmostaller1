@@ -36,6 +36,7 @@ public class Sc1LoginView {
 		img1 = app.loadImage("img/login.png"); 
 		inputs = new String[4];
 		font1  = app.createFont("fonts/font1.ttf",18); 
+		sc1logincontrol = new Sc1LoginControl();
 		
 		inputs[0] = "username";
 		inputs[2] = "password";
@@ -44,22 +45,21 @@ public class Sc1LoginView {
 
 		
 		for (int i = 0; i < inputs.length; i++) {
+			
 			cp5.addTextfield(inputs[i]).setPosition((app.width / 2) - 120, 328 + (i * 62))
-			.setSize(210, 30)
 		    .setAutoClear(true) 
 		    .setColor(100)
 		    .setColorActive(app.color(255,0,0,1)) // color del cuadrado externo
 			.setColorBackground(app.color(255,255,255,1)) // asi lo vuelvo transparente
 			.setColorForeground(app.color(255,0,0,1))  //// 
 			.setFont(font1)
-			//.setVisible(cambio) 
-			.setColorCaptionLabel(app.color(255,0,0,1));
+			.getCaptionLabel().hide()
+			;
 			
 			
 		}
 		
-		sc1logincontrol = new Sc1LoginControl();
-		cp5.addTextfield("hola").setPosition((app.width / 2) - 120, 600 ); 
+		
 		 
 		
 			
@@ -76,9 +76,9 @@ public class Sc1LoginView {
 	
 	}
 	private void drawButton() {
-		app.fill(255,0,0);
+		app.fill(255,0,0,1);
 		app.noStroke();
-		app.rect((app.width / 2) - 40, 700, 80, 30);
+		app.rect((app.width / 2) - 40, 700, 80, 35);
 	}
 	public void getInfoForm() {
 		if (app.mouseX > (app.width / 2) - 40 
@@ -106,7 +106,11 @@ public class Sc1LoginView {
 				if(password.equals(confirmPassword) ) {
 					sc1logincontrol.getInfoForm(username,password,confirmPassword,email);
 					cambio=false;
-					cp5.get(Textfield.class, "hola").hide(); 
+					for (int i = 0; i < inputs.length; i++) {
+						cp5.get(Textfield.class, inputs[i]).hide();
+						
+					}
+					
 					
 				}
 			}
