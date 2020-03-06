@@ -30,6 +30,7 @@ public class MainView extends PApplet {
 	private Sc1LoginView sc1loginview; 
 	private Sc1SigninView sc1signinview; 
 	
+	private int screen; 
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -37,12 +38,14 @@ public class MainView extends PApplet {
 
 	}
 	
+	
 	public void settings() {
 		size(375,812);
 
 	}
 
 	public void setup() {
+		
 		cp5 = new ControlP5(this);
 		carcharview = new CarCharView(); 
 		carcompareview = new CarCompareView();
@@ -54,6 +57,7 @@ public class MainView extends PApplet {
 		sc1loginview = new Sc1LoginView(this); 
 		sc1signinview = new Sc1SigninView(this); 
 		
+		screen = 0;
 		
 		
 
@@ -61,17 +65,31 @@ public class MainView extends PApplet {
 
 	public void draw() {
 		background(0); 
-		sc1loginview.drawScreen();
-	//homeview.drawpantalla();
+		
+	
 	    //fill(255,0,0); 
 		//text("mousex:"+mouseX+"mouseY:"+mouseY,mouseX,mouseY);
 		
 		
+	   switch (screen) {
+	case 0:
+		sc1loginview.drawScreen();
 		
+		break;
+	case 1: 
+		homeview.drawpantalla();
+		break; 
+
+	default:
+		break;
+	}
 
 	}
 	public void mousePressed() {
 		sc1loginview.getInfoForm();
+		if(sc1loginview.getCambio()==false) {
+			screen=1;
+		}
 	}
 	
 	

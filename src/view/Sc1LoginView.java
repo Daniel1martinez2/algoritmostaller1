@@ -17,8 +17,11 @@ public class Sc1LoginView {
 	private PImage img1; 
 	private PFont font1; 
 	
+	private boolean cambio=true; 
+	
 	
 
+	
 	
 	Sc1LoginControl sc1login;
 	
@@ -79,6 +82,8 @@ public class Sc1LoginView {
 			confirmPassword = cp5.get(Textfield.class, "confirmPassword").getText();
 			email = cp5.get(Textfield.class, "email").getText();
 			
+			
+			
 			//Esto valida que un string sea igual a otro
 			String Str1 = new String("");
 			 boolean confirmo1; 
@@ -93,15 +98,20 @@ public class Sc1LoginView {
 			if(!confirmo1 && !confirmo2  && !confirmo3 ) {
 				if(password.equals(confirmPassword) ) {
 					sc1logincontrol.getInfoForm(username,password,confirmPassword,email);
+					cambio=false;
 					
 				}
 			}
 			
 		}
 	}
-	
-	public void cambio() {
-		
+	public boolean getCambio() {
+		return cambio;
+	}
+
+
+	public void setCambio(boolean cambio) {
+		this.cambio = cambio;
 	}
 	
 	

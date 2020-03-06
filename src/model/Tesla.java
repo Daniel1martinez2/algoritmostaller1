@@ -19,7 +19,7 @@ public class Tesla {
 
 	}
 	public void registerUser(String username, String password, String email) {
-		usuarios.add(new Usuario(username, password, email));
+		usuarios.add(new Usuario(username, password, email) );
 		
 		for (Usuario nuevo : usuarios) {
 			System.out.println(usuarios.size());
