@@ -47,6 +47,7 @@ public class Sc1LoginView {
 		for (int i = 0; i < inputs.length; i++) {
 			
 			cp5.addTextfield(inputs[i]).setPosition((app.width / 2) - 120, 328 + (i * 62))
+			.setSize(235, 30)
 		    .setAutoClear(true) 
 		    .setColor(100)
 		    .setColorActive(app.color(255,0,0,1)) // color del cuadrado externo
