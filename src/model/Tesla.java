@@ -32,6 +32,17 @@ public class Tesla {
 	}
 	
 	
+	public ArrayList<Usuario> getUsuarios() {
+		return usuarios;
+		 
+	}
+	public void setUsuarios(ArrayList<Usuario> usuarios) {
+		this.usuarios = usuarios;
+	}
+	
+
+	
+	
 	
 	
 	

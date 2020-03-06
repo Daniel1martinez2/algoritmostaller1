@@ -71,8 +71,7 @@ public class MainView extends PApplet {
 		background(0); 
 		
 	
-	    //fill(255,0,0); 
-		//text("mousex:"+mouseX+"mouseY:"+mouseY,mouseX,mouseY);
+	    
 		
 		
 	   switch (screen) {
@@ -87,6 +86,9 @@ public class MainView extends PApplet {
 	default:
 		break;
 	}
+	 
+	   //fill(255,0,0); 
+		//text("mousex:"+mouseX+"mouseY:"+mouseY,mouseX,mouseY);
 
 	}
 	public void mousePressed() {

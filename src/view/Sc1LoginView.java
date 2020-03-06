@@ -50,9 +50,9 @@ public class Sc1LoginView {
 			.setSize(235, 30)
 		    .setAutoClear(true) 
 		    .setColor(100)
-		    .setColorActive(app.color(255,0,0,1)) // color del cuadrado externo
-			.setColorBackground(app.color(255,255,255,1)) // asi lo vuelvo transparente
-			.setColorForeground(app.color(255,0,0,1))  //// 
+		    .setColorActive(app.color(255,0,0,1)) 
+			.setColorBackground(app.color(255,255,255,1)) 
+			.setColorForeground(app.color(255,0,0,1))  
 			.setFont(font1)
 			.getCaptionLabel().hide()
 			;
