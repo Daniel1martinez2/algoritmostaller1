@@ -56,6 +56,7 @@ public class HomeView {
 			sisa = 3;
 		}
 	}
+	
 
 	public int isSisa() {
 		return sisa;
@@ -64,5 +65,7 @@ public class HomeView {
 	public void setSisa(int sisa) {
 		this.sisa = sisa;
 	}
+	
+	
 
 }
