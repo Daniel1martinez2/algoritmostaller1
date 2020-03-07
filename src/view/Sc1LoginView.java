@@ -1,8 +1,12 @@
 package view;
 
 import controller.Sc1LoginControl;
+import model.Usuario;
 import processing.core.PApplet;
 import processing.core.PImage;
+
+import java.util.ArrayList;
+
 import controlP5.*;
 import processing.core.PFont;
 
@@ -21,14 +25,14 @@ public class Sc1LoginView {
 	public Sc1LoginView(PApplet app) {
 		cambio = true;
 
-		sc1login = new Sc1LoginControl();
+		sc1login = new Sc1LoginControl(app);
 
 		this.app = app;
 		cp5 = new ControlP5(app);
 		img1 = app.loadImage("img/login.png");
 		inputs = new String[4];
 		font1 = app.createFont("fonts/font1.ttf", 18);
-		sc1logincontrol = new Sc1LoginControl();
+		sc1logincontrol = new Sc1LoginControl(app);
 
 		inputs[0] = "username";
 		inputs[2] = "password";
@@ -45,18 +49,22 @@ public class Sc1LoginView {
 		}
 
 	}
-
+    //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	public void drawScreen() {
 		app.image(img1, 0, 0);
 		drawButton();
+	
 
 	}
+	//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 	private void drawButton() {
 		app.fill(255, 0, 0, 1);
 		app.noStroke();
 		app.rect((app.width / 2) - 40, 700, 80, 35);
 	}
+	//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 	public void getInfoForm() {
 		if (app.mouseX > (app.width / 2) - 40 && app.mouseX < (app.width / 2) - 4 + 80 && app.mouseY > 700
@@ -90,6 +98,8 @@ public class Sc1LoginView {
 		}
 	}
 	
+	//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 	public boolean getCambio() {
 		return cambio;
@@ -98,7 +108,11 @@ public class Sc1LoginView {
 	public void setCambio(boolean cambio) {
 		this.cambio = cambio;
 	}
+	public String intento() {
+		return cp5.get(Textfield.class, "username").getText();
+	}
 
+	
 	
 
 }

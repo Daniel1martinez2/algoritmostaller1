@@ -44,7 +44,7 @@ public class MainView extends PApplet {
 	public void setup() {
 
 		cp5 = new ControlP5(this);
-		carcharview = new CarCharView();
+		carcharview = new CarCharView(this);
 		carcompareview = new CarCompareView();
 		compraview = new CompraView();
 		envioview = new EnvioView();
@@ -68,35 +68,95 @@ public class MainView extends PApplet {
 			break;
 		case 1:
 			homeview.drawpantalla();
+			fill(255,0,0);
+			
+			text(sc1loginview.intento(), 45,193);
+			
 			break;
+			
+		case 2: 
+			
+			//------------------------------------------------
+			switch (homeview.isSisa()) {
+			case 1:
+				carcharview.drawScreen1();
+				break;
+			case 2:
+				carcharview.drawScreen2();
+				break;
+			case 3:
+				carcharview.drawScreen3();
+				break;
+
+			default:
+				break;
+			}
+			//------------------------------------------------
+
+			break; 
 
 		default:
 			break;
 		}
+		
 
-		// fill(255,0,0);
-		// text("mousex:"+mouseX+"mouseY:"+mouseY,mouseX,mouseY);
+		//fill(0);
+		 //text("mousex:"+mouseX+"mouseY:"+mouseY,mouseX,mouseY);
 
 	}
-
 	public void mousePressed() {
 		switch (screen) {
 		case 0:
 			sc1loginview.getInfoForm();
 			if (sc1loginview.getCambio() == false) {
-
 				screen = 1;
 			}
-
 			break;
 		case 1:
-
+			
+			homeview.car1(); 
+			homeview.car2(); 
+			homeview.car3(); 
+			
+			
+			//------------------------------------------------
+			switch (homeview.isSisa()) {
+			case 1:
+				screen = 2; 
+				
+				
+				break;
+			case 2:
+				screen = 2; 
+			
+				break;
+			case 3:
+				screen = 2; 
+				
+				break;
+			default:
+				break;
+			}
+			//------------------------------------------------
 			break;
-
+		case 2:
+			
+			ledi(); 
+			break; 
 		default:
 			break;
 		}
-
 	}
+public void ledi() {
+	
+		if (mouseX > 0 && mouseX < 100 && mouseY > 0 && mouseY < 100) {
+			System.out.println("k");
+			screen = 1; 
+			homeview.setSisa(0);
+		
+	}
+}
+
+	
 
 }
