@@ -12,6 +12,8 @@ public class HomeView {
 	private PImage homeimg; 
 	private HomeControl homecontrol;
 	private PFont font1; 
+	
+	private String username;
 
 	public HomeView(PApplet app) {
 		homecontrol = new HomeControl(); 
@@ -19,6 +21,7 @@ public class HomeView {
 		cp5 = new ControlP5(app); 
 		homeimg = app.loadImage("img/home.png"); 
 		font1 = app.createFont("fonts/font1.ttf", 12); 
+		
 				
 	}
 	
@@ -27,7 +30,9 @@ public class HomeView {
 		app.image(homeimg,0,0); 
 		app.textFont(font1);
 		app.fill(0);
-		app.text("hello", 35, 195);
+		
+	
+		
 		
 	}
 

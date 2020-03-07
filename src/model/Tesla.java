@@ -2,51 +2,41 @@ package model;
 
 import java.util.ArrayList;
 
-
-
 public class Tesla {
 	private ArrayList<Usuario> usuarios;
-	private int  screens; 
-	
-
-	
 
 	public Tesla() {
 		usuarios = new ArrayList<Usuario>();
-		
-	
-	 
 
 	}
+
 	public void registerUser(String username, String password, String email) {
-		usuarios.add(new Usuario(username, password, email) );
+		usuarios.add(new Usuario(username, password, email));
+		imprimo(); 
 		
-		for (Usuario nuevo : usuarios) {
+
+	}
+
+	public void imprimo() {
+		for (Usuario i : usuarios) {
 			System.out.println(usuarios.size());
-			System.out.println(nuevo.getUsername());
-			System.out.println(nuevo.getPassword());
-			System.out.println(nuevo.getEmail());
+			System.out.println(i.getUsername());
+			System.out.println(i.getPassword());
+			System.out.println(i.getEmail());
 			System.out.println("====================");
 		}
 		
 	}
 	
 	
-	public ArrayList<Usuario> getUsuarios() {
-		return usuarios;
-		 
-	}
-	public void setUsuarios(ArrayList<Usuario> usuarios) {
-		this.usuarios = usuarios;
-	}
-	
 
-	
-	
-	
-	
-	
-	
-	
+	/*
+	 *  for (int i = 0; i < listUsers.size(); i++) { 
+	 *  
+	 * System.out.println(listUsers.get(i).getUsername());
+	 * System.out.println(listUsers.get(i).getPassword());
+	 * System.out.println(listUsers.get(i).getEmail());
+	 * System.out.println("===================="); }
+	 */
 
 }

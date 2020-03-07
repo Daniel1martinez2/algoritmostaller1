@@ -15,6 +15,8 @@ public class Sc1LoginControl {
 	public void getInfoForm(String username, String password, String confirmPassword, String email) {
 		tesla.registerUser(username,password,email);
 		
+		
+		
 	}
 
 }
