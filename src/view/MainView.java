@@ -6,7 +6,7 @@ import processing.core.PFont;
 import controlP5.*;
 
 import view.CarCharView;
-import view.CarCompareView;
+
 import view.CompraView;
 import view.EnvioView;
 import view.HistorialView;
@@ -19,7 +19,7 @@ import view.Sc1SigninView;
 public class MainView extends PApplet {
 	private ControlP5 cp5;
 	private CarCharView carcharview;
-	private CarCompareView carcompareview;
+	
 	private CompraView compraview;
 	private EnvioView envioview;
 	private HistorialView historialview;
@@ -45,8 +45,7 @@ public class MainView extends PApplet {
 
 		cp5 = new ControlP5(this);
 		carcharview = new CarCharView(this);
-		carcompareview = new CarCompareView();
-		compraview = new CompraView();
+		compraview = new CompraView(this);
 		envioview = new EnvioView();
 		historialview = new HistorialView();
 		homeview = new HomeView(this);
@@ -69,13 +68,13 @@ public class MainView extends PApplet {
 		case 1:
 			homeview.drawpantalla();
 			fill(0);
-			text(sc1loginview.intento(), 45,193);
-			
+			text(sc1loginview.intento(), 45, 193);
+
 			break;
-			
-		case 2: 
-			
-			//------------------------------------------------
+
+		case 2:
+
+			// ------------------------------------------------
 			switch (homeview.isSisa()) {
 			case 1:
 				carcharview.drawScreen1();
@@ -90,19 +89,23 @@ public class MainView extends PApplet {
 			default:
 				break;
 			}
-			//------------------------------------------------
+			// ------------------------------------------------
 
-			break; 
+			break;
+		case 3:
+		
+
+			break;
 
 		default:
 			break;
 		}
-		
 
-		//fill(0);
-		 //text("mousex:"+mouseX+"mouseY:"+mouseY,mouseX,mouseY);
+		// fill(0);
+		// text("mousex:"+mouseX+"mouseY:"+mouseY,mouseX,mouseY);
 
 	}
+
 	public void mousePressed() {
 		switch (screen) {
 		case 0:
@@ -112,62 +115,52 @@ public class MainView extends PApplet {
 			}
 			break;
 		case 1:
-			
-			homeview.car1(); 
-			homeview.car2(); 
-			homeview.car3(); 
-			
-			
-			//------------------------------------------------
+
+			homeview.car1();
+			homeview.car2();
+			homeview.car3();
+
+			// ------------------------------------------------
 			switch (homeview.isSisa()) {
 			case 1:
-				screen = 2; 
-				
-				
+				screen = 2;
+
 				break;
 			case 2:
-				screen = 2; 
-			
+				screen = 2;
+
 				break;
 			case 3:
-				screen = 2; 
-				
+				screen = 2;
+
 				break;
 			default:
 				break;
 			}
-			//------------------------------------------------
+			// ------------------------------------------------
 			break;
 		case 2:
+
+			ledi();
 			
-			ledi(); 
-			break; 
+			//screen = 3;
+			break;
 		default:
 			break;
 		}
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	//metodos chafa---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-     public void ledi() {
-	
+
+	// metodos
+	// chafa---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	// -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	public void ledi() {
+
 		if (mouseX > 0 && mouseX < 100 && mouseY > 0 && mouseY < 100) {
 			System.out.println("k");
-			screen = 1; 
+			screen = 1;
 			homeview.setSisa(0);
-		
-	}
-}
 
-	
+		}
+	}
 
 }

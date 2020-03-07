@@ -38,6 +38,14 @@ public class CarCharView {
 	}
 
 	
+	
+	public void comparo1() {
+		if(app.mouseX >0&&app.mouseX<100) {
+			
+			
+			
+		}
+	}
 
 	
 
