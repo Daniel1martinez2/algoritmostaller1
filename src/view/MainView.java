@@ -6,7 +6,6 @@ import processing.core.PFont;
 import controlP5.*;
 
 import view.CarCharView;
-
 import view.CompraView;
 import view.EnvioView;
 import view.HistorialView;
