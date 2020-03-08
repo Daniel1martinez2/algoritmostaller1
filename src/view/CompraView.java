@@ -81,6 +81,12 @@ public class CompraView {
 		compracontrol.eliminoX(); 
 		
 	}
+	//-------------
+	
+	public void total() {
+		compracontrol.total(); 
+	}
+	//-------
 
 	public boolean isComprando() {
 		return comprando;

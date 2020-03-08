@@ -53,6 +53,7 @@ public class MainView extends PApplet {
 		sc1signinview = new Sc1SigninView(this);
 
 		screen = 0;
+		
 
 	}
 
@@ -61,10 +62,12 @@ public class MainView extends PApplet {
 
 		switch (screen) {
 		case 0:
+			envioview.hidein(); 
 			sc1loginview.drawScreen();
 
 			break;
 		case 1:
+			envioview.hidein(); 
 			homeview.drawpantalla();
 			fill(0);
 			textSize(18);
@@ -73,6 +76,7 @@ public class MainView extends PApplet {
 			break;
 
 		case 2:
+			envioview.hidein(); 
 
 			// ------------------------------------------------
 			switch (homeview.isSisa()) {
@@ -93,11 +97,14 @@ public class MainView extends PApplet {
 
 			break;
 		case 3:
+			envioview.hidein(); 
 			compraview.drawScreen();
 
 			break;
 		case 4:
 			envioview.drawScreen();
+			compraview.total();
+			envioview.showin(); 
 			break;
 
 		default:
@@ -186,6 +193,7 @@ public class MainView extends PApplet {
 			break;
 		case 4:
 			atrasCompra();
+			
 
 			break;
 		default:

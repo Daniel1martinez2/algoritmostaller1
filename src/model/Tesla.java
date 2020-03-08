@@ -10,8 +10,6 @@ public class Tesla {
 	private int mo3;
 	private int mos;
 	private int mox;
-	
-	
 
 	public Tesla(PApplet app) {
 		usuarios = new ArrayList<Usuario>();
@@ -20,9 +18,7 @@ public class Tesla {
 		mo3 = 0;
 		mos = 0;
 		mox = 0;
-		
-		
-		
+
 	}
 
 	public void registerUser(String username, String password, String email) {
@@ -59,19 +55,16 @@ public class Tesla {
 			if (carritos.get(i) != null && carritos.get(i) instanceof Model3) {
 
 				carritos.remove(i);
-				System.out.println("PROBANDo=============" + i);
 				mo3--;
 			}
 		}
 	}
-
 	public void eliminoCarroS() {
 
 		for (int i = 0; i < carritos.size(); i++) {
 			if (carritos.get(i) != null && carritos.get(i) instanceof ModelS) {
 
 				carritos.remove(i);
-				System.out.println("PROBANDo=============" + i);
 				mos--;
 			}
 		}
@@ -83,7 +76,6 @@ public class Tesla {
 			if (carritos.get(i) != null && carritos.get(i) instanceof ModelX) {
 
 				carritos.remove(i);
-				System.out.println("PROBANDo=============" + i);
 				mox--;
 			}
 		}
@@ -99,25 +91,28 @@ public class Tesla {
 				carritos.get(i).pintar();
 				app.text("Model 3", 30, 175);
 				app.text(mo3, 160, 175);
-				app.text("$"+(mo3*58190), 250, 175);
-				//124,000
+				app.text("$" + (mo3 * 58190), 250, 175);
 			}
 
 			if (carritos.get(i) instanceof ModelX) {
 				carritos.get(i).pintar();
 				app.text("Model X", 30, 175 + 196);
 				app.text(mox, 160, 175 + 196);
-				app.text("$"+(mox*104990), 250, 175 + 196);
+				app.text("$" + (mox * 104990), 250, 175 + 196);
 			}
-
 			if (carritos.get(i) instanceof ModelS) {
 				carritos.get(i).pintar();
-				app.text("Model S", 30, 175 + 196+200 );
-				app.text(mos, 160, 175 + 196+200 );
-				app.text("$"+(mos * 124000), 250, 175 + 196+200 );
-				
+				app.text("Model S", 30, 175 + 196 + 200);
+				app.text(mos, 160, 175 + 196 + 200);
+				app.text("$" + (mos * 124000), 250, 175 + 196 + 200);
 			}
 		}
+	}
+	public void total() {
+		int total = ((mo3 * 58190) + (mox * 104990) + (mos * 124000));
+		app.textSize(15);
+		app.text("$" + total, 270, 700);
+
 	}
 
 	public void imprimo() {

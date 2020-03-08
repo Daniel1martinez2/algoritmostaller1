@@ -14,7 +14,7 @@ public class Sc1LoginView {
 	private String username, password, confirmPassword, email;
 	private PApplet app;
 	private ControlP5 cp5;
-	private String[] inputs;
+	private String[] inputs; //
 	private Sc1LoginControl sc1logincontrol;
 	private PImage img1;
 	private PFont font1;
@@ -30,7 +30,7 @@ public class Sc1LoginView {
 		this.app = app;
 		cp5 = new ControlP5(app);
 		img1 = app.loadImage("img/login.png");
-		inputs = new String[4];
+		inputs = new String[4]; //
 		font1 = app.createFont("fonts/font1.ttf", 18);
 		sc1logincontrol = new Sc1LoginControl(app);
 

@@ -32,6 +32,10 @@ public class CompraControl {
 		tesla.pintocrro3();
 	}
 	
+	public void total() {
+		tesla.total(); 
+	}
+	
 
 	public void elimino3() {
 
