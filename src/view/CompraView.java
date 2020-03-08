@@ -72,7 +72,7 @@ public class CompraView {
 		compracontrol.elimino3(); 
 		System.out.println("eliminandoando");
 	}
-	public void eliminos() {
+	public void eliminox() {
 		compracontrol.eliminoX(); 
 		
 	}

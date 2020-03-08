@@ -101,8 +101,8 @@ public class MainView extends PApplet {
 			break;
 		}
 
-		fill(0);
-		text(mouseX + "||" + mouseY, mouseX, mouseY);
+		//fill(0);
+		//text(mouseX + "||" + mouseY, mouseX, mouseY);
 
 	}
 
@@ -151,11 +151,11 @@ public class MainView extends PApplet {
 
 				break;
 			case 2:
-				compraview.aComprarS();
+				compraview.aComprarX();
 
 				break;
 			case 3:
-				compraview.aComprarX();
+				compraview.aComprarS();
 
 				break;
 			default:
@@ -173,8 +173,7 @@ public class MainView extends PApplet {
 			compraview.agregox();
 
 			compraview.elimino3();
-
-			compraview.eliminos();
+			compraview.eliminox();
 
 			ledi();
 			break;
