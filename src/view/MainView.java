@@ -18,7 +18,7 @@ import view.Sc1SigninView;
 public class MainView extends PApplet {
 	private ControlP5 cp5;
 	private CarCharView carcharview;
-	
+
 	private CompraView compraview;
 	private EnvioView envioview;
 	private HistorialView historialview;
@@ -92,7 +92,7 @@ public class MainView extends PApplet {
 
 			break;
 		case 3:
-		
+			compraview.drawScreen();
 
 			break;
 
@@ -101,7 +101,7 @@ public class MainView extends PApplet {
 		}
 
 		// fill(0);
-		// text("mousex:"+mouseX+"mouseY:"+mouseY,mouseX,mouseY);
+		// text(mouseX + "||" + mouseY, mouseX, mouseY);
 
 	}
 
@@ -141,8 +141,15 @@ public class MainView extends PApplet {
 		case 2:
 
 			ledi();
-			
-			//screen = 3;
+			carcharview.comparar();
+			compraview.aComprar();
+			if (compraview.isComprando()) {
+				screen = 3;
+			}
+
+			break;
+		case 3:
+			ledi();
 			break;
 		default:
 			break;
@@ -154,11 +161,13 @@ public class MainView extends PApplet {
 	// -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	public void ledi() {
 
-		if (mouseX > 0 && mouseX < 100 && mouseY > 0 && mouseY < 100) {
+		if (mouseX > 0 && mouseX < 100 && mouseY > 0 && mouseY < 25) {
 			System.out.println("k");
 			screen = 1;
 			homeview.setSisa(0);
-
+			carcharview.setComparo(false);
+			compraview.setComprando(false);
+			
 		}
 	}
 

@@ -15,7 +15,7 @@ public class HomeView {
 	private PFont font1;
 
 	private String username;
-	int sisa;
+	private int sisa;
 
 	public HomeView(PApplet app) {
 
@@ -32,9 +32,6 @@ public class HomeView {
 		app.image(homeimg, 0, 0);
 		app.textFont(font1);
 		app.fill(0);
-		// app.rect(245,342,92,25);
-		// app.rect(245,515,92,25);
-		// app.rect(245,515+(515-342),92,25);
 
 	}
 
@@ -56,6 +53,8 @@ public class HomeView {
 			sisa = 3;
 		}
 	}
+	
+	
 	
 
 	public int isSisa() {
