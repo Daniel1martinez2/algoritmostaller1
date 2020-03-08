@@ -10,6 +10,7 @@ public class CompraView {
 	private PApplet app;
 	private PImage purchase;
 	private boolean comprando;
+	
 
 	public CompraView(PApplet app) {
 
@@ -17,11 +18,15 @@ public class CompraView {
 		compracontrol = new CompraControl(app);
 		purchase = app.loadImage("img/purchase.jpg");
 		comprando = false;
+		
 
 	}
 
 	public void drawScreen() {
 		app.image(purchase, 0, 0);
+		compracontrol.pintocarro();
+		
+	
 
 	}
 
@@ -29,12 +34,9 @@ public class CompraView {
 		if (app.mouseX > 45 && app.mouseX < 145 && app.mouseY > 745) {
 			comprando = true;
 			System.out.println("hola");
-			
+			compracontrol.creocarro3();
 			
 		}
-		
-		
-
 	}
 
 	public boolean isComprando() {

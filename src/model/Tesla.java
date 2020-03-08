@@ -6,9 +6,11 @@ import processing.core.PApplet;
 public class Tesla {
 	private PApplet app;
 	private ArrayList<Usuario> usuarios;
+	private ArrayList<Auto> carritos;
 
 	public Tesla(PApplet app) {
 		usuarios = new ArrayList<Usuario>();
+		carritos = new ArrayList<Auto>();
          this.app= app;
 	}
 
@@ -17,6 +19,26 @@ public class Tesla {
 		imprimo();
 		
 
+	}
+	public void creoCarro3(int model) {
+		carritos.add(new Model3(model,app)); 
+		System.out.println(carritos.size());
+		
+		
+	}
+	
+	public void pintocrro3() {
+		for (int i = 0; i < carritos.size(); i++) {
+			carritos.get(i).pintar();
+			app.fill(0);
+			app.text(carritos.size(), 160, 175);
+		    if (carritos.get(i) instanceof Model3) {
+		    	app.text("Model 3", 30, 175);
+		    }
+			
+			
+		}
+		
 	}
 
 	public void imprimo() {
@@ -29,6 +51,8 @@ public class Tesla {
 		}
 
 	}
+	
+	
 
 	
 	

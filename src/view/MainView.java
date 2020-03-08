@@ -100,8 +100,8 @@ public class MainView extends PApplet {
 			break;
 		}
 
-		// fill(0);
-		// text(mouseX + "||" + mouseY, mouseX, mouseY);
+		//fill(0);
+		 //text(mouseX + "||" + mouseY, mouseX, mouseY);
 
 	}
 
