@@ -33,20 +33,6 @@ public class Tesla {
 
 	}
 
-	public void eliminoCarro3() {
-		for (int j = 0; j < carritos.size(); j++) {
-			if (carritos.get(j) != null) {
-
-				carritos.remove(j);
-				mo3--;
-
-				System.out.println("elimine" + carritos.size());
-			}
-
-		}
-
-	}
-
 	public void creoCarroS() {
 		carritos.add(new ModelS(app));
 		mos++;
@@ -61,6 +47,44 @@ public class Tesla {
 
 	}
 
+	// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	public void eliminoCarro3() {
+
+		for (int i = 0; i < carritos.size(); i++) {
+			if (carritos.get(i) != null && carritos.get(i) instanceof Model3) {
+
+				carritos.remove(i);
+				System.out.println("PROBANDo=============" + i);
+				mo3--;
+			}
+		}
+	}
+
+	public void eliminoCarroS() {
+
+		for (int i = 0; i < carritos.size(); i++) {
+			if (carritos.get(i) != null && carritos.get(i) instanceof ModelS) {
+
+				carritos.remove(i);
+				System.out.println("PROBANDo=============" + i);
+				mos--;
+			}
+		}
+	}
+
+	public void eliminoCarroX() {
+
+		for (int i = 0; i < carritos.size(); i++) {
+			if (carritos.get(i) != null && carritos.get(i) instanceof ModelX) {
+
+				carritos.remove(i);
+				System.out.println("PROBANDo=============" + i);
+				mox--;
+			}
+		}
+	}
+	// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 	public void pintocrro3() {
 		for (int i = 0; i < carritos.size(); i++) {
 
@@ -74,14 +98,14 @@ public class Tesla {
 
 			if (carritos.get(i) instanceof ModelS) {
 				carritos.get(i).pintar();
-				app.text("Model s", 30, 175 + 196);
-				app.text(mos, 160, 175 + 196);
+				app.text("Model X", 30, 175 + 196);
+				app.text(mox, 160, 175 + 196);
 			}
 
 			if (carritos.get(i) instanceof ModelX) {
 				carritos.get(i).pintar();
-				app.text("Model X", 30, 175 + 196 + 200);
-				app.text(mox, 160, 175 + 196 + 200);
+				app.text("Model S", 30, 175 + 196 + 200);
+				app.text(mos, 160, 175 + 196 + 200);
 			}
 		}
 	}

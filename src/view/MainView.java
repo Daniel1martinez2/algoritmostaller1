@@ -67,6 +67,7 @@ public class MainView extends PApplet {
 		case 1:
 			homeview.drawpantalla();
 			fill(0);
+			textSize(18);
 			text(sc1loginview.intento(), 45, 193);
 
 			break;
@@ -101,7 +102,7 @@ public class MainView extends PApplet {
 		}
 
 		fill(0);
-		 text(mouseX + "||" + mouseY, mouseX, mouseY);
+		text(mouseX + "||" + mouseY, mouseX, mouseY);
 
 	}
 
@@ -169,6 +170,12 @@ public class MainView extends PApplet {
 			break;
 		case 3:
 			compraview.agrego(); // agrego al modelo 3
+			compraview.agregox();
+
+			compraview.elimino3();
+
+			compraview.eliminos();
+
 			ledi();
 			break;
 		default:

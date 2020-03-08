@@ -24,6 +24,7 @@ public class CompraView {
 
 		app.image(purchase, 0, 0);
 		compracontrol.pintocarro();
+		
 
 	}
 
@@ -54,24 +55,31 @@ public class CompraView {
 
 		}
 	}
-
 	public void agrego() {
 		if (app.mouseX > 150&&app.mouseX<170
 				&&app.mouseY>130&&app.mouseY<145) {
 			compracontrol.creocarro3();
 
 		}
-		if (app.mouseX > 150&&app.mouseX<170
-				&&app.mouseY>190&&app.mouseY<200) {
-		     compracontrol.elimino3();
-			System.out.println(69);
-
+	}
+	public void agregox() {
+		if (app.mouseX > 153 && app.mouseX < 176 && app.mouseY > 332 && app.mouseY < 342) {
+			compracontrol.creocarroX();
 		}
-
+	}
+	
+	public void elimino3() {
+		compracontrol.elimino3(); 
+		System.out.println("eliminandoando");
+	}
+	public void eliminos() {
+		compracontrol.eliminoX(); 
+		
 	}
 
 	public boolean isComprando() {
 		return comprando;
+		
 	}
 
 	public void setComprando(boolean comprando) {
