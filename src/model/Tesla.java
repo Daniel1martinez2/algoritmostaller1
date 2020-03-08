@@ -7,38 +7,68 @@ public class Tesla {
 	private PApplet app;
 	private ArrayList<Usuario> usuarios;
 	private ArrayList<Auto> carritos;
+	private int mo3;
+	private int mos;
+	private int mox;
 
 	public Tesla(PApplet app) {
 		usuarios = new ArrayList<Usuario>();
 		carritos = new ArrayList<Auto>();
-         this.app= app;
+		this.app = app;
+		mo3 = 0;
+		mos = 0;
+		mox = 0;
 	}
 
 	public void registerUser(String username, String password, String email) {
 		usuarios.add(new Usuario(username, password, email));
 		imprimo();
-		
 
 	}
-	public void creoCarro3(int model) {
-		carritos.add(new Model3(model,app)); 
-		System.out.println(carritos.size());
-		
-		
+
+	public void creoCarro3() {
+		carritos.add(new Model3(app));
+		mo3++;
+		System.out.println(carritos.size() + "model 3");
+
 	}
-	
+
+	public void creoCarroS() {
+		carritos.add(new ModelS(app));
+		mos++;
+		System.out.println(carritos.size() + "model S");
+
+	}
+	public void creoCarroX() {
+		carritos.add(new ModelX(app));
+		mox++;
+		System.out.println(carritos.size() + "model X");
+
+	}
+
 	public void pintocrro3() {
 		for (int i = 0; i < carritos.size(); i++) {
-			carritos.get(i).pintar();
+
 			app.fill(0);
-			app.text(carritos.size(), 160, 175);
-		    if (carritos.get(i) instanceof Model3) {
-		    	app.text("Model 3", 30, 175);
-		    }
+
+			if (carritos.get(i) instanceof Model3) {
+				carritos.get(i).pintar();
+				app.text("Model 3", 30, 175);
+				app.text(mo3, 160, 175);
+			}
+
+			if (carritos.get(i) instanceof ModelS) {
+				carritos.get(i).pintar();
+				app.text("Model s", 30, 175 + 196);
+				app.text(mos, 160, 175 + 196);
+			}
 			
-			
+			if (carritos.get(i) instanceof ModelX) {
+				carritos.get(i).pintar();
+				app.text("Model X", 30, 175 + 196+200);
+				app.text(mox, 160, 175 + 196+200);
+			}
 		}
-		
 	}
 
 	public void imprimo() {
@@ -49,22 +79,5 @@ public class Tesla {
 			System.out.println(i.getEmail());
 			System.out.println("====================");
 		}
-
 	}
-	
-	
-
-	
-	
-	
-
-	/*
-	 * for (int i = 0; i < listUsers.size(); i++) {
-	 * 
-	 * System.out.println(listUsers.get(i).getUsername());
-	 * System.out.println(listUsers.get(i).getPassword());
-	 * System.out.println(listUsers.get(i).getEmail());
-	 * System.out.println("===================="); }
-	 */
-
 }

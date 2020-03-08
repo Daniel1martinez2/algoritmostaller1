@@ -14,7 +14,13 @@ public class CompraControl {
 
 	}
 	public void creocarro3() {
-		tesla.creoCarro3(100);
+		tesla.creoCarro3();
+	}
+	public void creocarroS() {
+		tesla.creoCarroS();
+	}
+	public void creocarroX() {
+		tesla.creoCarroX();
 	}
 	
 	public void pintocarro() {

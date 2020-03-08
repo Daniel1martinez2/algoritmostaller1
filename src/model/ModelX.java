@@ -1,19 +1,20 @@
 package model;
 
 import processing.core.PApplet;
+import processing.core.PImage;
 
 public class ModelX extends Auto {
+	PImage car; 
 
-	public ModelX(int modelo, PApplet app) {
-		super(modelo, app);
-		// TODO Auto-generated constructor stub
+	public ModelX(PApplet app) {
+		super( app);
+		car = app.loadImage("img/objetoComprado.jpg"); 
 	}
 
 	@Override
 	void pintar() {
-		// TODO Auto-generated method stub
-		
-		
+		app.image(car, 0, 500);
+		 
 	}
 
 }

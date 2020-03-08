@@ -100,8 +100,8 @@ public class MainView extends PApplet {
 			break;
 		}
 
-		//fill(0);
-		 //text(mouseX + "||" + mouseY, mouseX, mouseY);
+		// fill(0);
+		// text(mouseX + "||" + mouseY, mouseX, mouseY);
 
 	}
 
@@ -142,7 +142,26 @@ public class MainView extends PApplet {
 
 			ledi();
 			carcharview.comparar();
-			compraview.aComprar();
+			// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			switch (homeview.isSisa()) {
+			case 1:
+
+				compraview.aComprar3();
+
+				break;
+			case 2:
+				compraview.aComprarS();
+
+				break;
+			case 3:
+				compraview.aComprarX();
+
+				break;
+			default:
+				break;
+			}
+			// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
 			if (compraview.isComprando()) {
 				screen = 3;
 			}
@@ -167,7 +186,7 @@ public class MainView extends PApplet {
 			homeview.setSisa(0);
 			carcharview.setComparo(false);
 			compraview.setComprando(false);
-			
+
 		}
 	}
 

@@ -10,14 +10,18 @@ public class CarCharView {
 	private PImage fondo;
 	private PImage fondoComparo;
 	private boolean comparo;
-	private CompraView compraview;
+	
+	
+	
+	
 
 	public CarCharView(PApplet app) {
 		this.app = app;
 		carcharcontrol = new CarCharControl();
 		fondo = app.loadImage("img/caracteristicas.jpg");
 		fondoComparo = app.loadImage("img/compara.png");
-		compraview = new CompraView(app);
+		
+		
 
 	}
 
@@ -27,9 +31,9 @@ public class CarCharView {
 
 		if (comparo) {
 			comparo1();
-			// compraview.drawScreen();
 		}
 		app.text("panta 1", app.width / 2 - 10, 20);
+		
 
 	}
 
