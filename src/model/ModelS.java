@@ -13,7 +13,7 @@ public class ModelS extends Auto{
 
 	@Override
 	void pintar() {
-		app.image(car, 0, 300);
+		app.image(car, 0, 500);
 		 
 	}
 	

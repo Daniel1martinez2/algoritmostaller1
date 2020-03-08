@@ -13,7 +13,7 @@ public class ModelX extends Auto {
 
 	@Override
 	void pintar() {
-		app.image(car, 0, 500);
+		app.image(car, 0, 300);
 		 
 	}
 

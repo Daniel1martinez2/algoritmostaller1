@@ -45,7 +45,7 @@ public class MainView extends PApplet {
 		cp5 = new ControlP5(this);
 		carcharview = new CarCharView(this);
 		compraview = new CompraView(this);
-		envioview = new EnvioView();
+		envioview = new EnvioView(this);
 		historialview = new HistorialView();
 		homeview = new HomeView(this);
 		resumeview = new ResumenView();
@@ -96,13 +96,17 @@ public class MainView extends PApplet {
 			compraview.drawScreen();
 
 			break;
+		case 4:
+			envioview.drawScreen();
+			break;
 
 		default:
 			break;
 		}
 
-		//fill(0);
-		//text(mouseX + "||" + mouseY, mouseX, mouseY);
+		// fill(255);
+		// text(mouseX, mouseX, mouseY);
+		// text(mouseY, mouseX, mouseY+20);
 
 	}
 
@@ -171,11 +175,18 @@ public class MainView extends PApplet {
 		case 3:
 			compraview.agrego(); // agrego al modelo 3
 			compraview.agregox();
+			compraview.agregoS();
 
 			compraview.elimino3();
 			compraview.eliminox();
+			compraview.eliminos();
 
 			ledi();
+			credicard();
+			break;
+		case 4:
+			atrasCompra();
+
 			break;
 		default:
 			break;
@@ -194,6 +205,18 @@ public class MainView extends PApplet {
 			carcharview.setComparo(false);
 			compraview.setComprando(false);
 
+		}
+	}
+	public void atrasCompra() {
+
+		if (mouseX > 0 && mouseX < 100 && mouseY > 0 && mouseY < 25) {
+			screen = 3;
+		}
+	}
+	public void credicard() {
+		if (mouseX > 252 && mouseX < 338 && mouseY > 740) {
+			screen = 4;
+			System.out.println(screen);
 		}
 	}
 

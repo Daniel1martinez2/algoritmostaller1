@@ -10,6 +10,8 @@ public class Tesla {
 	private int mo3;
 	private int mos;
 	private int mox;
+	
+	
 
 	public Tesla(PApplet app) {
 		usuarios = new ArrayList<Usuario>();
@@ -18,6 +20,9 @@ public class Tesla {
 		mo3 = 0;
 		mos = 0;
 		mox = 0;
+		
+		
+		
 	}
 
 	public void registerUser(String username, String password, String email) {
@@ -94,18 +99,23 @@ public class Tesla {
 				carritos.get(i).pintar();
 				app.text("Model 3", 30, 175);
 				app.text(mo3, 160, 175);
-			}
-
-			if (carritos.get(i) instanceof ModelS) {
-				carritos.get(i).pintar();
-				app.text("Model X", 30, 175 + 196);
-				app.text(mox, 160, 175 + 196);
+				app.text("$"+(mo3*58190), 250, 175);
+				//124,000
 			}
 
 			if (carritos.get(i) instanceof ModelX) {
 				carritos.get(i).pintar();
-				app.text("Model S", 30, 175 + 196 + 200);
-				app.text(mos, 160, 175 + 196 + 200);
+				app.text("Model X", 30, 175 + 196);
+				app.text(mox, 160, 175 + 196);
+				app.text("$"+(mox*104990), 250, 175 + 196);
+			}
+
+			if (carritos.get(i) instanceof ModelS) {
+				carritos.get(i).pintar();
+				app.text("Model S", 30, 175 + 196+200 );
+				app.text(mos, 160, 175 + 196+200 );
+				app.text("$"+(mos * 124000), 250, 175 + 196+200 );
+				
 			}
 		}
 	}

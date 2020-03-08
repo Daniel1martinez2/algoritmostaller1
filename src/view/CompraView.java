@@ -67,6 +67,11 @@ public class CompraView {
 			compracontrol.creocarroX();
 		}
 	}
+	public void agregoS() {
+		if (app.mouseX > 153 && app.mouseX < 176 && app.mouseY > 531 && app.mouseY < 544) {
+			compracontrol.creocarroS();
+		}
+	}
 	
 	public void elimino3() {
 		compracontrol.elimino3(); 
@@ -84,6 +89,12 @@ public class CompraView {
 
 	public void setComprando(boolean comprando) {
 		this.comprando = comprando;
+	}
+
+	public void eliminos() {
+		compracontrol.eliminoS();
+		
+		
 	}
 
 }

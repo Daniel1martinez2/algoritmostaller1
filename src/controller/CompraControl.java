@@ -44,14 +44,18 @@ public class CompraControl {
 
 	public void eliminoX() {
 		if (app.mouseX > 153 && app.mouseX < 176 && app.mouseY > 391 && app.mouseY < 399) {
-			tesla.eliminoCarroS(); 
+			tesla.eliminoCarroX(); 
 			
 		}
 
 	}
 
 	public void eliminoS() {
-
+		if (app.mouseX > 153 && app.mouseX < 176 && app.mouseY > 590 && app.mouseY < 600) {
+			tesla.eliminoCarroS(); 
+			
+		}
 	}
+	
 
 }
