@@ -33,12 +33,27 @@ public class Tesla {
 
 	}
 
+	public void eliminoCarro3() {
+		for (int j = 0; j < carritos.size(); j++) {
+			if (carritos.get(j) != null) {
+
+				carritos.remove(j);
+				mo3--;
+
+				System.out.println("elimine" + carritos.size());
+			}
+
+		}
+
+	}
+
 	public void creoCarroS() {
 		carritos.add(new ModelS(app));
 		mos++;
-		System.out.println(carritos.size() + "model S");
+		System.out.println(carritos.size() + "  model S");
 
 	}
+
 	public void creoCarroX() {
 		carritos.add(new ModelX(app));
 		mox++;
@@ -62,11 +77,11 @@ public class Tesla {
 				app.text("Model s", 30, 175 + 196);
 				app.text(mos, 160, 175 + 196);
 			}
-			
+
 			if (carritos.get(i) instanceof ModelX) {
 				carritos.get(i).pintar();
-				app.text("Model X", 30, 175 + 196+200);
-				app.text(mox, 160, 175 + 196+200);
+				app.text("Model X", 30, 175 + 196 + 200);
+				app.text(mox, 160, 175 + 196 + 200);
 			}
 		}
 	}

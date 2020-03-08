@@ -28,6 +28,7 @@ public class CompraView {
 	}
 
 	public void aComprar3() {
+	
 		if (app.mouseX > 45 && app.mouseX < 145 && app.mouseY > 745) {
 			comprando = true;
 			System.out.println("hola");
@@ -35,7 +36,7 @@ public class CompraView {
 
 		}
 	}
-	
+
 	public void aComprarS() {
 		if (app.mouseX > 45 && app.mouseX < 145 && app.mouseY > 745) {
 			comprando = true;
@@ -44,6 +45,7 @@ public class CompraView {
 
 		}
 	}
+
 	public void aComprarX() {
 		if (app.mouseX > 45 && app.mouseX < 145 && app.mouseY > 745) {
 			comprando = true;
@@ -52,9 +54,21 @@ public class CompraView {
 
 		}
 	}
-	
-	
-	
+
+	public void agrego() {
+		if (app.mouseX > 150&&app.mouseX<170
+				&&app.mouseY>130&&app.mouseY<145) {
+			compracontrol.creocarro3();
+
+		}
+		if (app.mouseX > 150&&app.mouseX<170
+				&&app.mouseY>190&&app.mouseY<200) {
+		     compracontrol.elimino3();
+			System.out.println(69);
+
+		}
+
+	}
 
 	public boolean isComprando() {
 		return comprando;

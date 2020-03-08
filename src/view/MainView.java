@@ -100,8 +100,8 @@ public class MainView extends PApplet {
 			break;
 		}
 
-		// fill(0);
-		// text(mouseX + "||" + mouseY, mouseX, mouseY);
+		fill(0);
+		 text(mouseX + "||" + mouseY, mouseX, mouseY);
 
 	}
 
@@ -168,6 +168,7 @@ public class MainView extends PApplet {
 
 			break;
 		case 3:
+			compraview.agrego(); // agrego al modelo 3
 			ledi();
 			break;
 		default:

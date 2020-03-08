@@ -26,6 +26,10 @@ public class CompraControl {
 	public void pintocarro() {
 		tesla.pintocrro3();
 	}
+	public void elimino3() {
+		tesla.eliminoCarro3();
+		
+	}
 	
 	
 
