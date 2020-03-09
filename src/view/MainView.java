@@ -48,7 +48,7 @@ public class MainView extends PApplet {
 		envioview = new EnvioView(this);
 		historialview = new HistorialView();
 		homeview = new HomeView(this);
-		resumeview = new ResumenView();
+		resumeview = new ResumenView(this);
 		sc1loginview = new Sc1LoginView(this);
 		sc1signinview = new Sc1SigninView(this);
 
@@ -107,16 +107,17 @@ public class MainView extends PApplet {
 			break;
 		case 5: 
 			envioview.hidein();
-			background(255,0,0); 
+			resumeview.drawScreen();
+			 
 			break; 
 
 		default:
 			break;
 		}
 
-		 fill(0);
-		text(mouseX, mouseX, mouseY);
-		text(mouseY, mouseX, mouseY+20);
+		 //fill(0);
+		//text(mouseX, mouseX, mouseY);
+		//text(mouseY, mouseX, mouseY+20);
 
 	}
 

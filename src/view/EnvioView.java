@@ -76,6 +76,13 @@ public class EnvioView {
 		cp5.get(Textfield.class, inputs2[1]).hide();
 		cp5.get(Textfield.class, inputs2[2]).hide();
 		cp5.get(Textfield.class, inputs2[3]).hide();
+		//------
+		cp5.get(Textfield.class, inputs2[0]).clear();
+		cp5.get(Textfield.class, inputs2[1]).clear();
+		cp5.get(Textfield.class, inputs2[2]).clear();
+		cp5.get(Textfield.class, inputs2[3]).clear();
+		
+		
 	}
 	public void showin() {
 		cp5.get(Textfield.class, inputs2[0]).show();

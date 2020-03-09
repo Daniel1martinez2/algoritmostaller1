@@ -91,7 +91,7 @@ public class CompraView {
 	public boolean isComprando() {
 		return comprando;
 		
-	}
+	}	
 
 	public void setComprando(boolean comprando) {
 		this.comprando = comprando;
