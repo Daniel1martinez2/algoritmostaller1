@@ -115,9 +115,9 @@ public class MainView extends PApplet {
 			break;
 		}
 
-		 //fill(0);
-		//text(mouseX, mouseX, mouseY);
-		//text(mouseY, mouseX, mouseY+20);
+		 fill(255);
+		text(mouseX, mouseX, mouseY);
+		text(mouseY, mouseX, mouseY+20);
 
 	}
 
@@ -130,10 +130,12 @@ public class MainView extends PApplet {
 			}
 			break;
 		case 1:
+			f(); 
 
 			homeview.car1();
 			homeview.car2();
 			homeview.car3();
+			
 
 			// ------------------------------------------------
 			switch (homeview.isSisa()) {
@@ -161,9 +163,7 @@ public class MainView extends PApplet {
 			// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 			switch (homeview.isSisa()) {
 			case 1:
-
 				compraview.aComprar3();
-
 				break;
 			case 2:
 				compraview.aComprarX();
@@ -238,6 +238,14 @@ public class MainView extends PApplet {
 			screen = 4;
 			System.out.println(screen);
 		}
+	}
+	public void f() {
+		if(mouseX>340&&mouseX<360&&mouseY>5&&mouseY<252 ) {
+			screen = 3; 
+			System.out.println("fffffff");
+			
+		}
+		
 	}
 
 }
