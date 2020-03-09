@@ -24,30 +24,22 @@ public class Tesla {
 	public void registerUser(String username, String password, String email) {
 		usuarios.add(new Usuario(username, password, email));
 		imprimo();
-
 	}
-
 	public void creoCarro3() {
 		carritos.add(new Model3(app));
 		mo3++;
 		System.out.println(carritos.size() + "model 3");
-
 	}
-
 	public void creoCarroS() {
 		carritos.add(new ModelS(app));
 		mos++;
 		System.out.println(carritos.size() + "  model S");
-
 	}
-
 	public void creoCarroX() {
 		carritos.add(new ModelX(app));
 		mox++;
 		System.out.println(carritos.size() + "model X");
-
 	}
-
 	// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	public void eliminoCarro3() {
 
@@ -84,16 +76,13 @@ public class Tesla {
 
 	public void pintocrro3() {
 		for (int i = 0; i < carritos.size(); i++) {
-
 			app.fill(0);
-
 			if (carritos.get(i) instanceof Model3) {
 				carritos.get(i).pintar();
 				app.text("Model 3", 30, 175);
 				app.text(mo3, 160, 175);
 				app.text("$" + (mo3 * 58190), 250, 175);
 			}
-
 			if (carritos.get(i) instanceof ModelX) {
 				carritos.get(i).pintar();
 				app.text("Model X", 30, 175 + 196);
@@ -112,9 +101,7 @@ public class Tesla {
 		int total = ((mo3 * 58190) + (mox * 104990) + (mos * 124000));
 		app.textSize(15);
 		app.text("$" + total, 270, 700);
-
 	}
-
 	public void imprimo() {
 		for (Usuario i : usuarios) {
 			System.out.println(usuarios.size());

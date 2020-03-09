@@ -53,7 +53,6 @@ public class MainView extends PApplet {
 		sc1signinview = new Sc1SigninView(this);
 
 		screen = 0;
-		
 
 	}
 
@@ -62,12 +61,12 @@ public class MainView extends PApplet {
 
 		switch (screen) {
 		case 0:
-			envioview.hidein(); 
+			envioview.hidein();
 			sc1loginview.drawScreen();
 
 			break;
 		case 1:
-			envioview.hidein(); 
+			envioview.hidein();
 			homeview.drawpantalla();
 			fill(0);
 			textSize(18);
@@ -76,7 +75,7 @@ public class MainView extends PApplet {
 			break;
 
 		case 2:
-			envioview.hidein(); 
+			envioview.hidein();
 
 			// ------------------------------------------------
 			switch (homeview.isSisa()) {
@@ -97,14 +96,14 @@ public class MainView extends PApplet {
 
 			break;
 		case 3:
-			envioview.hidein(); 
+			envioview.hidein();
 			compraview.drawScreen();
 
 			break;
 		case 4:
 			envioview.drawScreen();
 			compraview.total();
-			envioview.showin(); 
+			envioview.showin();
 			break;
 
 		default:
@@ -193,7 +192,6 @@ public class MainView extends PApplet {
 			break;
 		case 4:
 			atrasCompra();
-			
 
 			break;
 		default:
@@ -215,12 +213,14 @@ public class MainView extends PApplet {
 
 		}
 	}
+
 	public void atrasCompra() {
 
 		if (mouseX > 0 && mouseX < 100 && mouseY > 0 && mouseY < 25) {
 			screen = 3;
 		}
 	}
+
 	public void credicard() {
 		if (mouseX > 252 && mouseX < 338 && mouseY > 740) {
 			screen = 4;
