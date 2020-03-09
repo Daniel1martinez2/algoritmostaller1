@@ -13,6 +13,10 @@ public class EnvioControl {
 		
 	}
 	
+	public void creoCard(String ID, String pais, String ciudad, String dir) {
+		tesla.creoCard(ID);
+	}
+	
 	
 
 }

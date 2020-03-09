@@ -105,6 +105,10 @@ public class MainView extends PApplet {
 			compraview.total();
 			envioview.showin();
 			break;
+		case 5: 
+			envioview.hidein();
+			background(255,0,0); 
+			break; 
 
 		default:
 			break;
@@ -192,8 +196,15 @@ public class MainView extends PApplet {
 			break;
 		case 4:
 			atrasCompra();
+			envioview.getInfo(); 
+			if(envioview.isPanta()) {
+				screen = 5; 
+			}
 
 			break;
+		case 5:
+			ledi(); 
+			break; 
 		default:
 			break;
 		}

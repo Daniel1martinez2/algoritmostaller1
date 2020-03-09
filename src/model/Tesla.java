@@ -7,6 +7,7 @@ public class Tesla {
 	private PApplet app;
 	private ArrayList<Usuario> usuarios;
 	private ArrayList<Auto> carritos;
+	private ArrayList<Tarjeta> card;
 	private int mo3;
 	private int mos;
 	private int mox;
@@ -14,6 +15,7 @@ public class Tesla {
 	public Tesla(PApplet app) {
 		usuarios = new ArrayList<Usuario>();
 		carritos = new ArrayList<Auto>();
+		card = new ArrayList<Tarjeta>();
 		this.app = app;
 		mo3 = 0;
 		mos = 0;
@@ -24,6 +26,10 @@ public class Tesla {
 	public void registerUser(String username, String password, String email) {
 		usuarios.add(new Usuario(username, password, email));
 		imprimo();
+	}
+	public void creoCard(String ID) {
+		card.add(new Tarjeta(ID));
+		System.out.println("NUEVA TARJETAAA");
 	}
 	public void creoCarro3() {
 		carritos.add(new Model3(app));
