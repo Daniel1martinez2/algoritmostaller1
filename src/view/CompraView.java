@@ -30,9 +30,6 @@ public class CompraView {
 
 		app.image(purchase, 0, 0);
 		compracontrol.pintocarro();
-		
-		
-
 	}
 	public void algo() {
 		
