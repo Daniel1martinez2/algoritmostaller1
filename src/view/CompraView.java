@@ -13,8 +13,7 @@ public class CompraView {
 	private PApplet app;
 	private PImage purchase;
 	private boolean comprando;
-	private PImage pedidoim; 
-	
+	private PImage pedidoim;
 
 	public CompraView(PApplet app) {
 
@@ -22,7 +21,7 @@ public class CompraView {
 		compracontrol = new CompraControl(app);
 		purchase = app.loadImage("img/purchase.jpg");
 		comprando = false;
-		pedidoim = app.loadImage("img/pedido.png"); 
+		pedidoim = app.loadImage("img/pedido.png");
 
 	}
 
@@ -31,24 +30,24 @@ public class CompraView {
 		app.image(purchase, 0, 0);
 		compracontrol.pintocarro();
 	}
+
 	public void algo() {
-		
+
 		for (int i = 0; i < compracontrol.pedidoSize(); i++) {
-			if(compracontrol.getPedido().get(i)!=null) {
-				
-			
-				app.image(pedidoim, 0, i*120+55);
+			if (compracontrol.getPedido().get(i) != null) {
+
+				app.image(pedidoim, 0, i * 120 + 55);
 				app.fill(0);
-				app.text("pedido "+i,  0, i*120+110);
-				
+				app.text("pedido " + i, 0, i * 120 + 110);
+
 			}
-			
+
 		}
-		
+
 	}
 
 	public void aComprar3() {
-	
+
 		if (app.mouseX > 45 && app.mouseX < 145 && app.mouseY > 745) {
 			comprando = true;
 			System.out.println("hola");
@@ -73,45 +72,49 @@ public class CompraView {
 			compracontrol.creocarroX();
 		}
 	}
+
 	public void agrego() {
-		if (app.mouseX > 150&&app.mouseX<170
-				&&app.mouseY>130&&app.mouseY<145) {
+		if (app.mouseX > 150 && app.mouseX < 170 && app.mouseY > 130 && app.mouseY < 145) {
 			compracontrol.creocarro3();
 		}
 	}
+
 	public void agregox() {
 		if (app.mouseX > 153 && app.mouseX < 176 && app.mouseY > 332 && app.mouseY < 342) {
 			compracontrol.creocarroX();
 		}
 	}
+
 	public void agregoS() {
 		if (app.mouseX > 153 && app.mouseX < 176 && app.mouseY > 531 && app.mouseY < 544) {
 			compracontrol.creocarroS();
 		}
 	}
-	
+
 	public void elimino3() {
-		compracontrol.elimino3(); 
+		compracontrol.elimino3();
 		System.out.println("eliminandoando");
 	}
+
 	public void eliminox() {
-		compracontrol.eliminoX(); 
-		
+		compracontrol.eliminoX();
+
 	}
+
 	public void creoPedido1() {
 		compracontrol.creoPedido1();
 	}
-	//-------------
-	
+	// -------------
+
 	public void total() {
-		compracontrol.total(); 
+		compracontrol.total();
 	}
-	//-------
+	// -------
 
 	public boolean isComprando() {
 		return comprando;
-		
-	}	
+
+	}
 
 	public void setComprando(boolean comprando) {
 		this.comprando = comprando;
@@ -119,12 +122,11 @@ public class CompraView {
 
 	public void eliminos() {
 		compracontrol.eliminoS();
-		
-		
+
 	}
+
 	public ArrayList<Pedido> getPedido() {
 		return compracontrol.getPedido();
 	}
-
 
 }
