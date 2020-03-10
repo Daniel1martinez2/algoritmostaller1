@@ -1,6 +1,9 @@
 package view;
 
+import java.util.ArrayList;
+
 import controller.CompraControl;
+import model.Pedido;
 import processing.core.PApplet;
 import processing.core.PImage;
 
@@ -10,6 +13,8 @@ public class CompraView {
 	private PApplet app;
 	private PImage purchase;
 	private boolean comprando;
+	private PImage pedidoim; 
+	
 
 	public CompraView(PApplet app) {
 
@@ -17,6 +22,7 @@ public class CompraView {
 		compracontrol = new CompraControl(app);
 		purchase = app.loadImage("img/purchase.jpg");
 		comprando = false;
+		pedidoim = app.loadImage("img/pedido.png"); 
 
 	}
 
@@ -25,7 +31,23 @@ public class CompraView {
 		app.image(purchase, 0, 0);
 		compracontrol.pintocarro();
 		
+		
 
+	}
+	public void algo() {
+		
+		for (int i = 0; i < compracontrol.pedidoSize(); i++) {
+			if(compracontrol.getPedido().get(i)!=null) {
+				
+			
+				app.image(pedidoim, 0, i*120+55);
+				app.fill(0);
+				app.text("pedido "+i,  0, i*120+110);
+				
+			}
+			
+		}
+		
 	}
 
 	public void aComprar3() {
@@ -52,14 +74,12 @@ public class CompraView {
 			comprando = true;
 			System.out.println("holymary");
 			compracontrol.creocarroX();
-
 		}
 	}
 	public void agrego() {
 		if (app.mouseX > 150&&app.mouseX<170
 				&&app.mouseY>130&&app.mouseY<145) {
 			compracontrol.creocarro3();
-
 		}
 	}
 	public void agregox() {
@@ -80,6 +100,9 @@ public class CompraView {
 	public void eliminox() {
 		compracontrol.eliminoX(); 
 		
+	}
+	public void creoPedido1() {
+		compracontrol.creoPedido1();
 	}
 	//-------------
 	
@@ -102,5 +125,9 @@ public class CompraView {
 		
 		
 	}
+	public ArrayList<Pedido> getPedido() {
+		return compracontrol.getPedido();
+	}
+
 
 }

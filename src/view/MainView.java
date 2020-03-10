@@ -2,7 +2,6 @@ package view;
 
 import processing.core.PApplet;
 import processing.core.PFont;
-import processing.core.PFont;
 import controlP5.*;
 
 import view.CarCharView;
@@ -46,7 +45,7 @@ public class MainView extends PApplet {
 		carcharview = new CarCharView(this);
 		compraview = new CompraView(this);
 		envioview = new EnvioView(this);
-		historialview = new HistorialView();
+		historialview = new HistorialView(this);
 		homeview = new HomeView(this);
 		resumeview = new ResumenView(this);
 		sc1loginview = new Sc1LoginView(this);
@@ -110,14 +109,18 @@ public class MainView extends PApplet {
 			resumeview.drawScreen();
 			 
 			break; 
+		case 6: 
+			historialview.drawScreen();
+			compraview.algo();
+			break; 
 
 		default:
 			break;
 		}
 
-		 fill(255);
-		text(mouseX, mouseX, mouseY);
-		text(mouseY, mouseX, mouseY+20);
+		// fill(0);
+		//text(mouseX, mouseX, mouseY);
+		//text(mouseY, mouseX, mouseY+20);
 
 	}
 
@@ -135,6 +138,7 @@ public class MainView extends PApplet {
 			homeview.car1();
 			homeview.car2();
 			homeview.car3();
+			g(); 
 			
 
 			// ------------------------------------------------
@@ -196,6 +200,7 @@ public class MainView extends PApplet {
 			credicard();
 			break;
 		case 4:
+			compraview.creoPedido1();
 			atrasCompra();
 			envioview.getInfo(); 
 			if(envioview.isPanta()) {
@@ -204,6 +209,10 @@ public class MainView extends PApplet {
 
 			break;
 		case 5:
+		
+			h(); 
+			break; 
+		case 6: 
 			ledi(); 
 			break; 
 		default:
@@ -222,6 +231,7 @@ public class MainView extends PApplet {
 			homeview.setSisa(0);
 			carcharview.setComparo(false);
 			compraview.setComprando(false);
+			envioview.setPanta(false); 
 
 		}
 	}
@@ -245,6 +255,24 @@ public class MainView extends PApplet {
 			System.out.println("fffffff");
 			
 		}
+		
+	}
+	public void g() {
+		if(mouseX>244&&mouseX<304&&mouseY>184&&mouseY<196 ) {
+			screen = 6; 
+		
+			
+		}
+		
+		
+	}
+	public void h() {
+		if(mouseX>239&&mouseX<329&&mouseY>753&&mouseY<779 ) {
+			screen = 6; 
+		
+			
+		}
+		
 		
 	}
 
