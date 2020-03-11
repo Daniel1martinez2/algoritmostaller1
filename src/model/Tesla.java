@@ -105,19 +105,19 @@ public class Tesla {
 	public void pintocrro3() {
 		for (int i = 0; i < carritos.size(); i++) {
 			app.fill(0);
-			if (carritos.get(i) instanceof Model3) {
+			if (carritos.get(i) instanceof Model3 &&mo3!=0) {
 				carritos.get(i).pintar();
 				app.text("Model 3", 30, 175);
 				app.text(mo3, 160, 175);
 				app.text("$" + (mo3 * 58190), 250, 175);
 			}
-			if (carritos.get(i) instanceof ModelX) {
+			if (carritos.get(i) instanceof ModelX&&mox!=0) {
 				carritos.get(i).pintar();
 				app.text("Model X", 30, 175 + 196);
 				app.text(mox, 160, 175 + 196);
 				app.text("$" + (mox * 104990), 250, 175 + 196);
 			}
-			if (carritos.get(i) instanceof ModelS) {
+			if (carritos.get(i) instanceof ModelS&&mos!=0) {
 				carritos.get(i).pintar();
 				app.text("Model S", 30, 175 + 196 + 200);
 				app.text(mos, 160, 175 + 196 + 200);
@@ -144,10 +144,11 @@ public class Tesla {
 	public void encero() {
 		for (int i = 0; i < carritos.size(); i++) {
 			carritos.remove(i);
+			setMo3(0);
+			setMos(0);
+			setMox(0);
 		}
-		setMo3(0);
-		setMos(0);
-		setMox(0);
+		
 	}
 
 	public int getMo3() {
